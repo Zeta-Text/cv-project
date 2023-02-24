@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { render } from '@testing-library/react';
+import React, { Component } from 'react';
+import Basic from './components/Basic';
+import Work from './components/Work';
+import Education from './components/Education'
 
-function App() {
+class App extends Component {
+
+  constructor() {
+    super();
+
+  }
+
+
+  render() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="sheet">
+      <div className="header">
+        <h2>Firstname Initial Lastname</h2>
+      </div>
+      <div className="container1">
+        <div className="basicInfo">
+            <Basic />
+        </div>
+        <div className="container2">
+          <div className="workInfo">
+            <Work />
+          </div>
+          <div className="educationInfo">
+            <Education />
+          </div>
+        </div>
+      </div>
+
+
+    </div>  
   );
+  }
 }
 
 export default App;
